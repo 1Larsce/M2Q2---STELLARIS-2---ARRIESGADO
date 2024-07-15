@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>  
+    <meta charset="utf-8">
+    <title>STELLARIS II - ANDROMEDA </title>
+    <link rel="shortcut icon" type="image/jpg" href="./assets/misc/stellaris2.png">
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background-image: url('./assets/misc/spacebg.gif'); /* Set background image */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #game-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 540px; /* Set the width of the game window */
+            height: 960px; /* Set the height of the game window */
+            border: 10px solid transparent; /* Set transparent border */
+            border-image: url('./assets/misc/yellowborder.png') 30 round; /* Set wood border image */
+            border-image-slice: 30; /* Set border image slice */
+        }
+
+        #center {
+            position: absolute;
+            bottom: -30px; /* Adjust bottom position to move it below the game window */
+            width: 300px; /* Set the width of the instructions panel */
+            border-radius: 10px;
+            background-color: rgba(0, 183, 255, 0.486);
+            padding: 20px; /* Add padding for better appearance */
+            text-align: center;
+            margin: 0 auto; /* Center horizontally */
+            transition: bottom 0.5s ease; /* Add transition effect for smooth movement */
+        }
+
+        input[name="playerName"] {
+            font-size: 24px;
+            text-align: center;
+            width: 100%; /* Ensure it spans the width of its container */
+            padding: 10px; /* Add padding for better appearance */
+            margin-top: 10px;
+            border: none; /* Remove default border */
+            border-radius: 5px; /* Add border radius for rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+            background-color: #fff; /* Add background color for visibility */
+            color: #000; /* Ensure text color is visible */
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <!-- Game canvas will be loaded here -->
+    </div>
+    <script src="./Scripts/phaser.min.js"></script>
+    <script src="./Scripts/Scenes/MainMenuScene.js"></script>
+    <script src="./Scripts/Scenes/GameScene.js"></script>
+    <script src="./Scripts/Scenes/GameOverScene.js"></script>
+    <script src="./Scripts/Scenes/OpeningScene.js"></script>
+    <script src="./Scripts/Scenes/HighScoresScene.js"></script>
+    <script src="./Scripts/main.js"></script>
+</body>
+</html>
